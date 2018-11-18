@@ -1,0 +1,104 @@
+Command Line Arguments:
+     dir = uploaded_images/ 
+    arch = alexnet 
+ dogfile = dognames.txt
+
+Pet Image Label Dictionary has 7 key-value pairs.
+Below are 7 of them:
+ 1 key:          Shiba_Inu _2_dog.jpeg  label:                      shiba
+ 2 key:                basenji_dog.jpg  label:                    basenji
+ 3 key:                Shiba_Inu_3.jpg  label:                  shiba inu
+ 4 key:         shiba_Inu_reverse.jpeg  label:                  shiba inu
+ 5 key:                 Shiba_Inu.jpeg  label:                      shiba
+ 6 key:                     horse.jpeg  label:                           
+ 7 key:             truck_vehicle.jpeg  label:                      truck
+
+     MATCH:
+
+               basenji_dog.jpg: 
+Real:                    basenji   Classifier:                        basenji
+
+                    horse.jpeg: 
+Real:                              Classifier:                         sorrel
+
+ NOT A MATCH:
+
+         Shiba_Inu _2_dog.jpeg: 
+Real:                      shiba   Classifier:                        basenji
+
+               Shiba_Inu_3.jpg: 
+Real:                  shiba inu   Classifier: dingo, warrigal, warragal, canis dingo
+
+        shiba_Inu_reverse.jpeg: 
+Real:                  shiba inu   Classifier:                 sussex spaniel
+
+                Shiba_Inu.jpeg: 
+Real:                      shiba   Classifier:                        basenji
+
+            truck_vehicle.jpeg: 
+Real:                      truck   Classifier:                        minivan
+
+# Total Images 7 # Matches: 2 # NOT Matches: 5
+
+     MATCH:
+
+               basenji_dog.jpg: 
+Real:                    basenji   Classifier:                        basenji  
+PetLabelDog: 1  ClassLabelDog: 1
+
+                    horse.jpeg: 
+Real:                              Classifier:                         sorrel  
+PetLabelDog: 0  ClassLabelDog: 0
+
+ NOT A MATCH:
+
+         Shiba_Inu _2_dog.jpeg: 
+Real:                      shiba   Classifier:                        basenji  
+PetLabelDog: 0  ClassLabelDog: 1
+
+               Shiba_Inu_3.jpg: 
+Real:                  shiba inu   Classifier: dingo, warrigal, warragal, canis dingo  
+PetLabelDog: 1  ClassLabelDog: 0
+
+        shiba_Inu_reverse.jpeg: 
+Real:                  shiba inu   Classifier:                 sussex spaniel  
+PetLabelDog: 1  ClassLabelDog: 1
+
+                Shiba_Inu.jpeg: 
+Real:                      shiba   Classifier:                        basenji  
+PetLabelDog: 0  ClassLabelDog: 1
+
+            truck_vehicle.jpeg: 
+Real:                      truck   Classifier:                        minivan  
+PetLabelDog: 0  ClassLabelDog: 0
+
+# Total Images 7 # Matches: 2 # NOT Matches: 5
+
+ ** Statistics from calculates_results_stats() function:
+N Images:  7  N Dog Images:  3  N NotDog Images:  4 
+Pct Corr dog:  66.7 Pct Corr NOTdog:  50.0  Pct Corr Breed:  33.3
+
+ ** Check Statistics - calculated from this function as a check:
+N Images:  7  N Dog Images:  3  N NotDog Images:  4 
+Pct Corr dog:  66.7 Pct Corr NOTdog:  50.0  Pct Corr Breed:  33.3
+
+
+*** Results Summary for CNN Model Architecture ALEXNET ***
+N Images            :   7
+N Dog Images        :   3
+N Not a Dog Images  :   4
+
+pct_correct_dogs 66.66666666666666
+pct_correct_breed 33.33333333333333
+pct_label_matches 28.57142857142857
+pct_correct_notdogs 50.0
+
+INCORRECT Dog/NOT Dog Assignments:
+Real:                      shiba   Classifier:                        basenji
+Real:                  shiba inu   Classifier: dingo, warrigal, warragal, canis dingo
+Real:                      shiba   Classifier:                        basenji
+
+INCORRECT Dog Breed Assignment:
+Real:                  shiba inu   Classifier:                 sussex spaniel
+
+** Total Elapsed Runtime: 0:0:0
